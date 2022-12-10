@@ -1,0 +1,269 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Almarai', sans-serif;
+    /* border: 1px solid lime; */
+}
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+header {
+    height: 12vh;
+    background-color: #F5F5F7;
+    box-shadow: 0px 1px 2px rgb(190 190 190);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2% 0 2%
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr .5fr 1fr;
+    padding: 2% 4% 4% 4%;
+} 
+
+
+.table {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.table-indicator {
+    height: 9vh;
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    margin-bottom: 1.4em;
+}
+
+
+.myFleet {
+    color: white;
+    background-color: #E2134D;
+}
+
+.opponent {
+    color: white;
+    background-color: #686E8A;
+}
+
+
+table {
+    /* margin-top: 100px; */
+    /* border-collapse: collapse; */
+    cursor: default;
+}
+
+.ships {
+    padding: 0 0 5% 9%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 10%;
+    column-gap: 20%;
+    width: 80%;
+    font-size: 1.1em;
+}
+
+.ships p{
+    font-weight: 600;
+}
+th {
+    font-weight: 600;
+    color: #3F4454;
+}
+td {
+    height: 2.3em;
+    width: 2.3em;
+    /* border: 1px solid black; */
+    background-color: #B1DEF6;
+    border-radius: 2px;
+}
+
+.attacked {
+    position: relative;
+    z-index: 5;
+}
+
+.div {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ship { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 2px solid #E2134D;
+    background-color: rgba(231, 9, 30, 0.3);
+    z-index: 1;
+    /* border-radius: 20px; */
+}
+
+
+.first {
+    color: #3F4454;
+    text-align: end;
+    padding-right: 2.5%;
+
+}
+
+
+footer {
+    height: 15vh;
+    /* outline: 1px solid black; */
+    background-color: #333;
+}
+
+.t {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.y::after {
+    content: '';
+    width: 2.3em;
+    height: 0.2em;
+    position: absolute;
+    top: 50%;
+    background-color: red;
+    transform: rotate(45deg);
+    /* display: none; */
+}
+
+.y::before {
+    content: '';
+    width: 2.3em;
+    height: 0.2em;
+    position: absolute;
+    top: 50%;
+    background-color: red;
+    transform: rotate(-45deg);
+    /* display: none;s */
+}
+
+.controls {
+    padding: 3%;
+    height: 4em;
+    width: 100%;
+    text-align: center;
+}
+
+.random {
+    text-decoration: underline dotted #E2134D;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.random:hover {
+    transform: scale(1.05);
+}
+
+.j {
+    height: 70%;
+    /* width: 100%; */
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 10%;
+}
+
+.message {
+    height: 10%;
+    width: 100%;
+    /* border: 1px solid lime; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    background-color: #3F4454;
+    font-weight: 600;
+    color: white;
+    border-radius: 13px;
+}
+
+
+.play, .reset {
+    font-weight: 900;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: all .4s;
+    text-decoration: underline;
+}
+
+.play:hover {
+    transform: scale(1.1);
+}
+
+
+.reset:hover {
+    transform: scale(1.1);
+}
+
+
+.winner {
+    width: 100%;
+    height: 100%;
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 2em;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 2;
+    text-align: center;
+}
+
+
+.text {
+    color: white;
+    font-size: 4em;
+}
+
+.win {
+    padding: .4em .8em;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+
+.destroyed {
+    text-decoration: line-through #E2134D;
+    color: #E2134D;
+}
+
+.miss {
+    color: #E2134D;
+    font-weight: 900;
+    font-size: .9em;
+    text-align: center;
+}
