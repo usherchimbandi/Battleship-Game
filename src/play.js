@@ -39,7 +39,7 @@ function play() {
             if(e.target.getAttribute('data-clicked') == 'false' && comPlayed.status) { // we first check if the block we clicked has a status of false, if not, nothing happens
                 comPlayed.status = false;
                 e.target.setAttribute('data-clicked', 'true');
-                const attack = [Number(e.path[0].dataset.x), Number(e.path[0].dataset.y)] // the coordinate we attacked
+                const attack = [Number(e.target.dataset.x), Number(e.target.dataset.y)] // the coordinate we attacked
                 player1.nodesAttacked.push(attack); // not sure if i still need this
                 const o = player2.gameboard.receiveAttack(attack); // the opponent gameboard receives our attack
                 // the above variable(o) returns the ship hit if a ship was hit
@@ -92,8 +92,8 @@ function play() {
                     // of the blocks(that we obviously should not click on) that are diagonal(there's 4 of them) to the clicked node 
                     diagonals(elems().nodesPlayer2, e.target);
                     // The following css changes apply the X feature on a ship that's been hit
-                    e.path[0].style.position = 'relative';
-                    e.path[0].classList.add('y');
+                    e.target.style.position = 'relative';
+                    e.target.classList.add('y');
                     comPlayed.status = true;
 
                     // This for loop is to change the status of all nodes that should obviously not be clicked, to true and also change their color
