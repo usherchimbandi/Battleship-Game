@@ -25,6 +25,7 @@ main {
     display: grid;
     grid-template-columns: 1fr .5fr 1fr;
     padding: 2% 4% 4% 4%;
+    width: max-content;
 } 
 
 
@@ -185,6 +186,7 @@ footer {
     align-items: center;
     flex-direction: column;
     row-gap: 10%;
+    margin: 0 15px;
 }
 
 .message {
